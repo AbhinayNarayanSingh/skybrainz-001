@@ -1,0 +1,43 @@
+$Manrope: "Manrope", sans-serif;
+
+// https://medium.com/swlh/full-text-styling-with-a-single-line-of-css-838e8c666f4d
+
+$font_h2: 800 24px/33px "Manrope", sans-serif;
+
+$font_p: 400 12px/22px "Manrope", sans-serif;
+
+$Mobile: 320px;
+$Tab: 480px;
+$Tab-M: 768px;
+$Desktop-S: 1024px;
+$Desktop-L: 1440px;
+
+$orange: #f84646;
+
+.button {
+  padding: 10px;
+  background: $orange;
+  border-radius: 5px;
+  font-family: $Manrope;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+@mixin input($border-colour, $border-focus-colour) {
+  padding: 0.5rem 1.5rem;
+  width: 80%;
+  margin-bottom: 15px;
+  background: transparent;
+  border-radius: 10px;
+  border: 3px solid $border-colour;
+  font: $font_h2;
+  font-size: 14px;
+  font-weight: 500;
+
+  &:focus {
+    border: 3px solid $border-focus-colour;
+  }
+}

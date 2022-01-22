@@ -1,0 +1,304 @@
+@import "reset";
+@import "variables";
+
+.container {
+  max-width: $Desktop-L;
+  margin: auto;
+}
+
+.hero {
+  background-image: url("../img/bck.svg");
+  max-height: 750px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: 70%;
+  background-size: cover;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  // background: rgba(white, 0.3);
+  background: radial-gradient(
+    118.67% 101.66% at 141.47% 78.12%,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  height: 600px;
+  width: 100%;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  .action {
+    @extend .button;
+  }
+  img {
+    height: 40px;
+  }
+}
+.hero-txt {
+  text-align: center;
+  color: #000000;
+  h2 {
+    padding: 30px 20px;
+    font-family: $Manrope;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 55px;
+  }
+  p {
+    padding: 0 20px;
+    font-family: Manrope;
+    font-size: 12px;
+    line-height: 23px;
+    letter-spacing: 0.2px;
+  }
+  form {
+    margin: 30px auto;
+    // width: 250px;
+    align-items: center;
+    padding: 0 10px;
+
+    // display: flex;
+    input[type="text"] {
+      @include input(white, $orange);
+      text-align: center;
+    }
+    input[type="submit"] {
+      @extend .button;
+      height: 50px;
+      padding: 5px 27px;
+    }
+  }
+}
+
+.service {
+  margin-top: 60px;
+  width: calc(100%-20px);
+  padding: 0 20px;
+  text-align: center;
+  color: #000000;
+  h2 {
+    font: $font_h2;
+    margin-bottom: 15px;
+  }
+  p {
+    max-width: 750px;
+    margin: auto;
+    font: $font_p;
+    letter-spacing: 0.2px;
+    margin-bottom: 40px;
+  }
+
+  .service-list {
+    margin: auto;
+    margin-bottom: 80px;
+    max-width: 350px;
+    height: 200px;
+  }
+}
+
+.team {
+  width: calc(100%-20px);
+  padding: 50px 20px;
+  text-align: center;
+
+  background-color: $orange;
+  h2 {
+    color: white;
+    font: $font_h2;
+  }
+  p {
+    padding-top: 1.5rem;
+    color: white;
+    font: $font_p;
+  }
+  .team-member {
+    padding-top: 50px;
+    p {
+      padding-top: 0.15rem;
+    }
+    i {
+      color: white;
+      padding: 1rem 0.5rem;
+    }
+  }
+}
+
+.sub {
+  width: calc(100%-20px);
+  max-width: 450px;
+  padding: 60px 20px;
+  text-align: center;
+  margin: auto;
+  h2 {
+    font: $font_h2;
+    margin-bottom: 15px;
+  }
+  p {
+    font: $font_p;
+    letter-spacing: 0.2px;
+  }
+  a {
+    @extend .button;
+    margin-top: 20px;
+    display: inline-block;
+  }
+}
+
+.our-client {
+  width: calc(100%-20px);
+  padding: 60px 20px;
+  text-align: center;
+  margin: auto;
+  background: #f4f5f7;
+  h2 {
+    font: $font_h2;
+    margin-bottom: 15px;
+  }
+  p {
+    font: $font_p;
+    letter-spacing: 0.2px;
+    max-width: 400px;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .client-logo {
+    background: #ffffff;
+    width: 170px;
+    height: 96px;
+    box-shadow: 0px 30px 40px rgba(212, 217, 232, 0.2);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    img {
+      max-width: 140px;
+    }
+  }
+}
+
+.contact {
+  margin: 60px auto;
+  width: calc(100%-20px);
+  max-width: 600px;
+  padding: 0 20px;
+  text-align: center;
+  color: #000000;
+  h2 {
+    font: $font_h2;
+    margin-bottom: 15px;
+  }
+  p {
+    font: $font_p;
+    letter-spacing: 0.2px;
+  }
+  form {
+    margin: 3rem 0;
+    input[type="text"] {
+      @include input(rgba(0, 0, 0, 0.1), $orange);
+      margin-bottom: 25px;
+    }
+    textarea {
+      @include input(rgba(0, 0, 0, 0.1), $orange);
+    }
+    input[type="submit"] {
+      @extend .button;
+      height: 50px;
+      font-size: 1rem;
+      margin-top: 30px;
+      width: 88%;
+    }
+  }
+}
+
+.footer {
+  margin-top: 60px;
+  width: calc(100%-20px);
+  padding: 50px 20px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $orange;
+  p,
+  a {
+    color: white;
+    font: $font_h2;
+    font-size: 14px;
+  }
+  a {
+    padding: 0 0.5rem;
+  }
+  .brand {
+    background-color: white;
+    $size: 100px;
+    height: $size;
+    width: $size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 20px;
+
+    img {
+      height: 70px;
+      padding: 1rem 2rem;
+    }
+  }
+}
+
+.service {
+  .list-service {
+    display: flex;
+    padding-top: 3rem;
+    flex-wrap: wrap;
+  }
+}
+.team {
+  .team-member-list {
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+  }
+}
+.our-client {
+  .client-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .hero {
+    .hero-txt {
+      max-width: 600px;
+      margin: 1rem auto 0;
+      padding: 0 2rem;
+      p {
+        max-width: 450px;
+        margin: auto;
+      }
+    }
+  }
+  .topbar {
+    max-width: 1250px;
+    margin: auto;
+    padding: 1rem 3rem;
+    img {
+      $size: 60px;
+      height: $size;
+      width: $size;
+    }
+  }
+}
